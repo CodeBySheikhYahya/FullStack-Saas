@@ -1,5 +1,79 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+Overview
+
+A Next.js project that provides a dashboard for managing todos with authentication using Clerk, database operations through Prisma, and API requests handled via Axios.
+
+Features
+
+User Authentication with Clerk
+
+CRUD Operations for Todos
+
+Debounced Search for better performance
+
+Pagination for managing large datasets
+
+Subscription Handling to check user subscription status
+
+Svix Webhooks Integration for real-time updates
+
+Technologies Used
+
+Next.js (React Framework)
+
+TypeScript (for type safety)
+
+Prisma (Database ORM)
+
+Clerk (Authentication)
+
+Svix (Webhooks for real-time events)
+
+Axios (for API requests)
+
+React Hooks (useState, useEffect, useCallback)
+
+usehooks-ts (Debounce effect for search)
+
+API Endpoints
+
+Todos
+
+GET /api/todos?page={number}&search={query} → Fetch paginated todos
+
+POST /api/todos → Add a new todo
+
+PUT /api/todos/{id} → Update a todo
+
+DELETE /api/todos/{id} → Delete a todo
+
+Subscription
+
+GET /api/subscription → Fetch user subscription status
+
+Webhooks (Svix)
+
+Handles real-time events via webhooks
+
+How It Works
+
+Users authenticate via Clerk.
+
+Todos are fetched and stored using Axios.
+
+Search functionality with debounce optimizes performance.
+
+Pagination manages large lists.
+
+Users can add, update, and delete todos.
+
+Subscription status is checked before certain actions.
+
+Webhooks (Svix) handle real-time updates when changes occur.
+
+Contributing
+
 ## Getting Started
 
 First, run the development server:
